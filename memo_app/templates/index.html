@@ -13,6 +13,13 @@
       </form>
     </div>
 
+    <form action="{% url 'set_order_option' %}" method="post">
+        {% csrf_token %}
+        <div class="slct01">
+            {{ order_option_form.order_option }}
+        </div>
+    </form>
+
     <form action="{% url 'set_record_number' %}" method="post">
         {% csrf_token %}
         <div class="slct01">
